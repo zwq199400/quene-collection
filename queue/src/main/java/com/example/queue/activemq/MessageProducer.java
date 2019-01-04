@@ -3,6 +3,7 @@ package com.example.queue.activemq;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsMessagingTemplate;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.stereotype.Component;
 
 
 /**
@@ -10,7 +11,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  * @author zwq
  * @date 2018/10/25 15:51
  */
-//@Component
+@Component
 @EnableScheduling
 public class MessageProducer {
 

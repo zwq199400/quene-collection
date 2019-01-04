@@ -1,12 +1,13 @@
 package com.example.queue.kafka;
 
 import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.stereotype.Component;
 
 /**
  * @author zwq
  * @date 2018/12/28 16:41
  */
-//@Component
+@Component
 public class Receiver {
 
     @KafkaListener(topics = "test1")

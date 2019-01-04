@@ -3,6 +3,7 @@ package com.example.queue.kafka;
 import com.example.queue.entity.Message;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.stereotype.Component;
 
 import java.util.Date;
 import java.util.UUID;
@@ -11,7 +12,7 @@ import java.util.UUID;
  * @author zwq
  * @date 2018/12/28 10:28
  */
-//@Component
+@Component
 public class Sender {
     @Autowired
     private KafkaTemplate kafkaTemplate;
