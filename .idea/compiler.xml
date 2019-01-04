@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="quene" />
+        <module name="queue" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="quene" target="1.8" />
+      <module name="queue" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

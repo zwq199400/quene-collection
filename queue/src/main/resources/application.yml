@@ -1,0 +1,48 @@
+spring:
+  activemq:
+    broker-url: tcp://localhost:61616
+    in-memory: true
+    pool:
+      enabled: false
+#  是否启用PUB-SUB模式
+  jms:
+    pub-sub-domain: true
+  kafka:
+    bootstrap-servers: 127.0.0.1:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      group-id: test
+      enable-auto-commit: true
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+
+rocketmq:
+  producer:
+    # 发送同一类消息的设置为同一个group，保证唯一,默认不需要设置，rocketmq会使用ip@pid(pid代表jvm名字)作为唯一标示
+    groupName: vehicleProducerGroup
+    #mq的nameserver地址
+    namesrvAddr: 127.0.0.1:9876
+    #如果需要同一个jvm中不同的producer往不同的mq集群发送消息，需要设置不同的instanceName
+    instanceName: vehicleProducer
+    #topic名称
+    topic: TEST
+    #根据实际情况设置消息的tag
+    tag: TEST
+    #消息最大长度
+    maxMessageSize: 131072 # 1024*128
+    #发送消息超时时间
+    sendMsgTimeout: 10000
+    #发送消息失败重试次数，默认2
+    retryTimesWhenSendFailed: 2
+  consumer:
+    namesrvAddr: 127.0.0.1:9876
+    groupName: vehicleProducerGroup
+    topic: sms
+    tag: verifycode
+    consumeThreadMin: 20
+    consumeThreadMax: 64
+    #设置一次消费消息的条数，默认为1条
+    consumeMessageBatchMaxSize: 1
