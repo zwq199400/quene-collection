@@ -17,3 +17,7 @@
     ① Apache 上开源官方地址：`https://rocketmq.apache.org/`  
     ② GitHub 托管地址：`https://github.com/apache/rocketmq`
 - **测试demo目录** `com.example.queue.kafka`
+
+### Contrast
+
+   ![](http://blog-10039692.file.myqcloud.com/1506330751030_7532_1506330753496.png)
